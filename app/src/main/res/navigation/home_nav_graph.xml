@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.bohrapankaj.mpm.ui.home.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/searchPasswordFragment"
+        android:name="com.bohrapankaj.mpm.ui.home.fragment.search.SearchPasswordFragment"
+        android:label="fragment_search_password"
+        tools:layout="@layout/fragment_search_password" />
+    <fragment
+        android:id="@+id/createPasswordFragment"
+        android:name="com.bohrapankaj.mpm.ui.home.fragment.create_password.CreatePasswordFragment"
+        android:label="fragment_create_password"
+        tools:layout="@layout/fragment_create_password" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.bohrapankaj.mpm.ui.home.fragment.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.bohrapankaj.mpm.ui.home.fragment.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+</navigation>

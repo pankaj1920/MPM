@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.auth.forgot_password.verify_otp.VerifyOtpFogPassFragment">
+    <ImageView
+        android:id="@+id/msgTmg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_msg"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/chekTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check your mail"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/msgTmg"/>
+
+    <TextView
+        android:id="@+id/restInfoTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We have sent a password recover \n instruction to your email."
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chekTxt"/>
+
+
+    <EditText
+        android:id="@+id/otpEt"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:hint="OTP"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:letterSpacing=".3"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/corner_background"
+        app:layout_constraintTop_toBottomOf="@id/restInfoTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/submitOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otpEt"
+        android:backgroundTint="@color/btn_color"
+        android:padding="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="50dp"
+        android:text="Submit "
+        android:textAllCaps="false"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/chekEmailTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Did not receive the email? Check your spam filter."
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@color/textColor"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/resendEmail"/>
+
+
+    <TextView
+        android:id="@+id/resendEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resend Email"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

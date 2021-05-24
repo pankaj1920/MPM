@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.bohrapankaj.mpm.ui.auth.signup.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.bohrapankaj.mpm.ui.auth.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_emailForgPassFragment"
+            app:destination="@id/emailForgPassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailForgPassFragment"
+        android:name="com.bohrapankaj.mpm.ui.auth.forgot_password.email_fog_pass.EmailForgPassFragment"
+        android:label="fragment_email_forg_pass"
+        tools:layout="@layout/fragment_email_forg_pass" >
+        <action
+            android:id="@+id/action_emailForgPassFragment_to_verifyOtpFogPassFragment"
+            app:destination="@id/verifyOtpFogPassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyOtpFogPassFragment"
+        android:name="com.bohrapankaj.mpm.ui.auth.forgot_password.verify_otp.VerifyOtpFogPassFragment"
+        android:label="fragment_verify_otp_fog_pass"
+        tools:layout="@layout/fragment_verify_otp_fog_pass" >
+        <action
+            android:id="@+id/action_verifyOtpFogPassFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment"
+            app:popUpTo="@id/changePasswordFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.bohrapankaj.mpm.ui.auth.forgot_password.change_password.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" >
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="otp"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_changePasswordFragment_to_loginFragment2"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

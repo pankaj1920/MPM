@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/homeFragment"
+        android:title="Vault"
+        android:icon="@drawable/ic_pin_password" />
+
+    <item android:id="@+id/searchPasswordFragment"
+        android:title="Search"
+        android:icon="@drawable/ic_search"/>
+
+    <item android:id="@+id/abc"
+        android:title=""/>
+
+    <item android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:icon="@drawable/ic_account"/>
+
+    <item android:id="@+id/settingFragment"
+        android:title="Setting"
+        android:icon="@drawable/ic_outline_settings_24"/>
+
+</menu>
